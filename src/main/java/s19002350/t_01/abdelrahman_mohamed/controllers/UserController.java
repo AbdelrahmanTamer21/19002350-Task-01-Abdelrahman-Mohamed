@@ -2,7 +2,9 @@ package s19002350.t_01.abdelrahman_mohamed.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import s19002350.t_01.abdelrahman_mohamed.models.Note;
 import s19002350.t_01.abdelrahman_mohamed.models.User;
+import s19002350.t_01.abdelrahman_mohamed.services.NoteService;
 import s19002350.t_01.abdelrahman_mohamed.services.UserService;
 
 import java.util.List;
@@ -12,9 +14,11 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
+    private final NoteService noteService;
 
-    public UserController(UserService userService) {
+    public UserController(UserService userService, NoteService noteService) {
         this.userService = userService;
+        this.noteService = noteService;
     }
 
     @GetMapping
@@ -47,5 +51,10 @@ public class UserController {
     @GetMapping("/search")
     public User searchByUsername(@RequestParam String username) {
         return userService.getUserByUsername(username);
+    }
+
+    @GetMapping("/{id}/notes")
+    public List<Note> getNotesByUserId(@PathVariable String id) {
+        return noteService.getNotesByUserId(id);
     }
 }
