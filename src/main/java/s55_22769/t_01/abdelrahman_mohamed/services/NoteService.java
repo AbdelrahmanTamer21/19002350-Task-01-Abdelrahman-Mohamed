@@ -34,6 +34,11 @@ public class NoteService {
         return userNotes;
     }
 
+    public Note getNoteByTitle(String title) {
+        return noteRepository.findByTitle(title)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Note not found with title: " + title));
+    }
+
     public Note createNote(Note note) {
         return noteRepository.save(note);
     }

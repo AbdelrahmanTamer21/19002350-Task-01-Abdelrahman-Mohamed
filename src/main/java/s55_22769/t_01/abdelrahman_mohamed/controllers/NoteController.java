@@ -1,12 +1,10 @@
 package s55_22769.t_01.abdelrahman_mohamed.controllers;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import s55_22769.t_01.abdelrahman_mohamed.models.Note;
 import s55_22769.t_01.abdelrahman_mohamed.services.NoteService;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/notes")
@@ -29,16 +27,13 @@ public class NoteController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
     public Note createNote(@RequestBody Note note) {
         return noteService.createNote(note);
     }
 
     @GetMapping("/search")
-    public List<Note> searchByTitle(@RequestParam String title) {
-        return noteService.getAllNotes().stream()
-                .filter(n -> n.getTitle().toLowerCase().contains(title.toLowerCase()))
-                .collect(Collectors.toList());
+    public Note searchByTitle(@RequestParam String title) {
+        return noteService.getNoteByTitle(title);
     }
 
     @PutMapping("/{id}")
@@ -47,7 +42,6 @@ public class NoteController {
     }
 
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteNote(@PathVariable String id) {
         noteService.deleteNote(id);
     }

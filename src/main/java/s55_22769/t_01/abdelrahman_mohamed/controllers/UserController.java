@@ -1,6 +1,5 @@
 package s55_22769.t_01.abdelrahman_mohamed.controllers;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import s55_22769.t_01.abdelrahman_mohamed.models.Note;
 import s55_22769.t_01.abdelrahman_mohamed.models.User;
@@ -32,7 +31,6 @@ public class UserController {
     }
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
@@ -43,7 +41,6 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteUser(@PathVariable String id) {
         userService.deleteUser(id);
     }
