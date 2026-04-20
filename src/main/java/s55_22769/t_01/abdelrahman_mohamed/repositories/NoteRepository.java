@@ -1,4 +1,4 @@
-package s19002350.t_01.abdelrahman_mohamed.repositories;
+package s55_22769.t_01.abdelrahman_mohamed.repositories;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.server.ResponseStatusException;
-import s19002350.t_01.abdelrahman_mohamed.models.Note;
+import s55_22769.t_01.abdelrahman_mohamed.models.Note;
 
 import java.io.InputStream;
 import java.util.List;

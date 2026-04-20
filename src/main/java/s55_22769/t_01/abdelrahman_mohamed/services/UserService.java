@@ -1,10 +1,10 @@
-package s19002350.t_01.abdelrahman_mohamed.services;
+package s55_22769.t_01.abdelrahman_mohamed.services;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import s19002350.t_01.abdelrahman_mohamed.models.User;
-import s19002350.t_01.abdelrahman_mohamed.repositories.UserRepository;
+import s55_22769.t_01.abdelrahman_mohamed.models.User;
+import s55_22769.t_01.abdelrahman_mohamed.repositories.UserRepository;
 
 import java.util.List;
 

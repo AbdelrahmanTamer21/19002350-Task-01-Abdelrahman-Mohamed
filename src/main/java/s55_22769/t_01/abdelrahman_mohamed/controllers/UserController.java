@@ -1,11 +1,11 @@
-package s19002350.t_01.abdelrahman_mohamed.controllers;
+package s55_22769.t_01.abdelrahman_mohamed.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import s19002350.t_01.abdelrahman_mohamed.models.Note;
-import s19002350.t_01.abdelrahman_mohamed.models.User;
-import s19002350.t_01.abdelrahman_mohamed.services.NoteService;
-import s19002350.t_01.abdelrahman_mohamed.services.UserService;
+import s55_22769.t_01.abdelrahman_mohamed.models.Note;
+import s55_22769.t_01.abdelrahman_mohamed.models.User;
+import s55_22769.t_01.abdelrahman_mohamed.services.NoteService;
+import s55_22769.t_01.abdelrahman_mohamed.services.UserService;
 
 import java.util.List;
 

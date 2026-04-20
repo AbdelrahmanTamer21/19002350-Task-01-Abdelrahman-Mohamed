@@ -1,4 +1,4 @@
-package s19002350.t_01.abdelrahman_mohamed.models;
+package s55_22769.t_01.abdelrahman_mohamed.models;
 
 import java.time.LocalDateTime;
 import java.util.UUID;
